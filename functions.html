@@ -33,31 +33,75 @@
 // Asynchronous operations often use callbacks, promises, or async/await to handle
 //  delayed results, allowing other code to run while waiting for the async task to complete.  -->
 
-function cal(){
-    function add(a,b){
-        console.log("addition is " + (a+b));
-    }
-    function mul(x,y){
-        console.log("multipliaction " +  (x*y));
-    }
-    add(3,5)
-    mul(3,5)
+// function cal(){
+//     function add(a,b){
+//         console.log("addition is " + (a+b));
+//     }
+//     function mul(x,y){
+//         console.log("multipliaction " +  (x*y));
+//     }
+//     add(3,5)
+//     mul(3,5)
   
 
-}
-cal();
+// }
+// cal();
 //short code for above function i.e. arrow function
-let msg1=() => console.log("hello abes ec");
-msg1();
+// let msg1=() => console.log("hello abes ec");
+// msg1();
 // arrow function using multiple line  
-let msg2=(a,b)=>{
-    var num1=a;
-    var num2=b;
-    var res=num1/num2;
-    console.log("result is " + res);
-}
+// let msg2=(a,b)=>{
+//     var num1=a;
+//     var num2=b;
+//     var res=num1/num2;
+//     console.log("result is " + res);
+// }
 
-msg2(10,20);
+// msg2(10,20);
+
+//IIFE-An IIFE (Immediately Invoked Function Expression) in JavaScript is a function that is defined and executed immediately after its creation.
+// It’s often used to create a private scope and avoid polluting the global namespace.
+
+// (FUNCTION(){
+//     console.log("hello world")
+// })();
+// //shortcut method
+// (msg=> console.log("hello"))();
+
+// let myPromise=new Promise(function(rejected,resolved){
+// let age=25;
+// if(age>=18){
+//     resolve("valid age");
+// }
+// else{
+//     reject("wait for next year");
+// }
+// });
+// myPromise
+// .then(msg=>console.log(msg))
+// .catch(error=>console.log(error));
+// console.log(myPromise);
+
+// async function userInfo(){
+//     try{
+//     let userData=await fetch('https://dummyjson.com/products');
+//     let response=await userData.json();
+//     Console.log(response);
+// }
+// catch(error){
+//     console.log(error);
+// }
+// }
+// userInfo();
+
+let num=[4,6,7,8,9,2];
+let square=num.map(n=>n*n);
+console.log(square);
+let sum=num.reduce((total,n)=>total+n);
+console.log(sum);
+let sorting=num.filter(n=>n>2);
+console.log(sorting);
+
 
 </script>
 
